@@ -1,0 +1,44 @@
+body {
+    background-color: silver;
+}
+img {
+    height: 190px;
+    width: 170px;
+    padding: 5px;
+}
+
+.card {
+    height: 200px;
+    width: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    margin: 5px;
+}
+
+/* .card:active {
+    transform: rotateY(180deg);
+} */
+.card.open {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.card-front{
+    background-color: white;
+    transform: rotateY(180deg);
+}
+.card-back {
+    background-color: orange;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
